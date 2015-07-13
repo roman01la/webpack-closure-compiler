@@ -12,6 +12,7 @@ npm i -D webpack-closure-compiler
 ## Usage
 
 Compiles ES5 into ES5 in `ADVANCED_OPTIMIZATIONS` mode.
+
 [What to Watch Out for When Using ADVANCED_OPTIMIZATIONS](https://developers.google.com/closure/compiler/docs/api-tutorial3#dangers)
 
 ```javascript

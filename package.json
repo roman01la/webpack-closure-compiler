@@ -1,0 +1,28 @@
+{
+  "name": "webpack-closure-compiler",
+  "version": "1.0.0",
+  "description": "Google Closure Compiler plugin for Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --entry ./test/entry.js --output-file ./test/module.js --plugin ./index.js"
+  },
+  "keywords": [
+    "webpack",
+    "closure",
+    "compiler",
+    "build",
+    "optimize",
+    "dead",
+    "code",
+    "plugin"
+  ],
+  "author": "Roman Liutikov",
+  "license": "MIT",
+  "dependencies": {
+    "webpack-core": "^0.6.5"
+  },
+  "devDependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1"
+  }
+}

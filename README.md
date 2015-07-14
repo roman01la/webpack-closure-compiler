@@ -1,40 +1,16 @@
-# webpack-closure-compiler
-Google Closure Compiler plugin for Webpack
+# Google Closure Compiler + React
+*This is not Webpack plugin, check master branch instead*
 
 **WIP**
 
-## Installation
+## Requirements
 
-```
-npm i -D webpack-closure-compiler
-```
+Java 7/8 😅
 
 ## Usage
 
-Compiles ES5 into ES5 in `ADVANCED_OPTIMIZATIONS` mode.
+Execute `npm test` to run Java task. Check output `module-gcc.js` in `test` dir.
 
-[What to Watch Out for When Using ADVANCED_OPTIMIZATIONS](https://developers.google.com/closure/compiler/docs/api-tutorial3#dangers)
+## Restrictions
 
-```javascript
-var path = require('path');
-var ClosureCompilerPlugin = require('webpack-closure-compiler');
-
-module.exports = {
-
-    entry: [
-        path.join(__dirname, 'app.js')
-    ],
-    module: {
-        loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader?optional=runtime&stage=0&cacheDirectory'] }
-        ]
-    },
-    output: {
-        path: path.join(__dirname, '/'),
-        filename: 'app.min.js'
-    },
-    plugins: [
-        new ClosureCompilerPlugin()
-    ]
-};
-```
+Plovr tool have no option to set CommonJS flag when executing GCC, so this package doesn't support CommonJS modules. Need to be able to run GCC with custom warnings guard and custom pass provided in `lib/react-closure-compiler`, can be done programmatically.

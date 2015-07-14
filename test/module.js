@@ -1,1 +1,0 @@
-(function(c){function a(d){if(b[d])return b[d].a;var e=b[d]={a:{},id:d,loaded:!1};c[d].call(e.a,e,e.a,a);e.loaded=!0;return e.a}var b={};a.f=c;a.b=b;a.c="";return a(0)})([function(c,a,b){c=b(1);console.log(c(30,3))},function(c){c.a=function(a,b){return a/b}}]);

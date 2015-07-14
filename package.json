@@ -4,7 +4,7 @@
   "description": "Google Closure Compiler plugin for Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --entry ./test/entry.js --output-file ./test/module.js --plugin ./index.js"
+    "test": "java -classpath .:./lib/react-closure-compiler.jar:./lib/plovr.jar org.plovr.cli.Main build ./lib/plovr-config.js"
   },
   "keywords": [
     "webpack",
@@ -17,12 +17,5 @@
     "plugin"
   ],
   "author": "Roman Liutikov",
-  "license": "MIT",
-  "dependencies": {
-    "webpack-core": "^0.6.5"
-  },
-  "devDependencies": {
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.10.1"
-  }
+  "license": "MIT"
 }

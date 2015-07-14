@@ -1,3 +1,11 @@
-var div = require('./divide');
+// var React = require('react');
 
-console.log(div(30, 3));
+var TestComponent = React.createClass({
+
+  render: function() {
+
+    return React.DOM.div(null, 'Hello!');
+  }
+});
+
+React.render(React.createElement(TestComponent), document.body);

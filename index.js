@@ -4,15 +4,17 @@ var RawSource = require('webpack-core/lib/RawSource');
 
 function ClosureCompilerPlugin(options) {
 
-  if (typeof options !== 'object') {
-    options = {};
+  var _options = {};
+
+  _options['language_in'] = 'ES5';
+  _options['language_out'] = 'ES5';
+  _options['compilation_level'] = 'ADVANCED';
+
+  for (var key in options) {
+    _options[key] = options[key];
   }
 
-  options['language_in'] = 'ES5';
-  options['language_out'] = 'ES5';
-  options['compilation_level'] = 'ADVANCED';
-
-  this.options = options;
+  this.options = _options;
 }
 
 ClosureCompilerPlugin.prototype.apply = function(compiler) {

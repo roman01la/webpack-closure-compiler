@@ -4,7 +4,7 @@
   "description": "Google Closure Compiler plugin for Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --entry ./test/entry.js --output-file ./test/module.js --plugin ./index.js"
+    "test": "webpack --entry ./test/entry.js --output-filename ./test/module.js --plugin ./index.js"
   },
   "keywords": [
     "webpack",
@@ -19,10 +19,10 @@
   "author": "Roman Liutikov",
   "license": "MIT",
   "dependencies": {
-    "webpack-core": "^0.6.5"
+    "webpack-core": "^0.6.8"
   },
   "devDependencies": {
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.10.1"
+    "node-libs-browser": "^0.5.3",
+    "webpack": "^1.12.4"
   }
 }

@@ -3,6 +3,8 @@ Google Closure Compiler plugin for Webpack
 
 **WIP**
 
+![Webpack Closure Compiler logo](logo.png)
+
 ## Installation
 
 ```

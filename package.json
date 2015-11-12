@@ -4,7 +4,7 @@
   "description": "Google Closure Compiler plugin for Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --entry ./test/entry.js --output-filename ./test/module.js --plugin ./index.js"
+    "test": "webpack --config test/webpack.config.js"
   },
   "keywords": [
     "webpack",

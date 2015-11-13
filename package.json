@@ -19,8 +19,10 @@
   "author": "Roman Liutikov",
   "license": "MIT",
   "dependencies": {
-    "google-closure-compiler": "^20151015.0.0",
-    "webpack-core": "^0.6.8"
+     "async": "^1.5.0",
+     "google-closure-compiler": "^20151015.0.0",
+     "temp": "^0.8.3",
+     "webpack-core": "^0.6.8"
   },
   "devDependencies": {
     "node-libs-browser": "^0.5.3",

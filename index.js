@@ -9,19 +9,29 @@ var async = require('async');
 var ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');
 
 function ClosureCompilerPlugin(options) {
-  this.options = options;
+  if (typeof options === "object") {
+    this.options = options;
+  } else {
+    this.options = {};
+  }
+  if (typeof this.options['compiler'] === "object") {
+    this.compilerOptions = this.options['compiler'];
+  } else {
+    this.compilerOptions = {};
+  }
 }
 
 ClosureCompilerPlugin.prototype.apply = function(compiler) {
 
   var options = this.options;
+  var compilerOptions = this.compilerOptions;
   var queue = async.queue(function(task, callback) {
 
     var input;
     var inputSourceMap;
     var outputSourceMapFile;
 
-    if (options['compiler']['create_source_map'] !== false) {
+    if (compilerOptions['create_source_map']) {
       if (task.asset.sourceAndMap) {
         var sourceAndMap = task.asset.sourceAndMap();
         inputSourceMap = sourceAndMap.map;
@@ -31,16 +41,16 @@ ClosureCompilerPlugin.prototype.apply = function(compiler) {
         input = task.asset.source();
       }
       outputSourceMapFile = temp.openSync('ccwp-dump-', 'w+');
-      options['compiler']['create_source_map'] = outputSourceMapFile.path;
+      compilerOptions['create_source_map'] = outputSourceMapFile.path;
     } else {
       input = task.asset.source();
     }
 
-    gcc.compile(input, options['compiler'], function (err, stdout, stderr) {
+    gcc.compile(input, compilerOptions, function (err, stdout, stderr) {
       if (err) {
         task.error(new Error(task.file + ' from Closure Compiler\n' + err.message));
       } else {
-        if (options['compiler']['create_source_map']) {
+        if (compilerOptions['create_source_map']) {
           var outputSourceMap = JSON.parse(fs.readFileSync(outputSourceMapFile.path));
           fs.unlinkSync(outputSourceMapFile.path);
           outputSourceMap.sources = [];

@@ -1,8 +1,6 @@
 # webpack-closure-compiler
 Google Closure Compiler plugin for Webpack
 
-**WIP**
-
 ![Webpack Closure Compiler logo](logo.png)
 
 ## Installation
@@ -56,3 +54,7 @@ module.exports = {
     ]
 };
 ```
+
+## License
+
+MIT

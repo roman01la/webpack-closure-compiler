@@ -1,6 +1,13 @@
 # webpack-closure-compiler
 Google Closure Compiler plugin for Webpack
 
+<a href="https://travis-ci.org/roman01la/webpack-closure-compiler">
+  <img src="https://img.shields.io/travis/roman01la/webpack-closure-compiler.svg?style=flat-square" />
+</a>
+<a href="https://www.npmjs.com/package/webpack-closure-compiler">
+  <img src="https://img.shields.io/npm/v/webpack-closure-compiler.svg?style=flat-square" />
+</a>
+
 ![Webpack Closure Compiler logo](logo.png)
 
 ## Installation

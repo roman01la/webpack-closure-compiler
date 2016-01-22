@@ -64,7 +64,7 @@ ClosureCompilerPlugin.prototype.apply = function(compiler) {
       callback();
     });
 
-  }, options['concurrency']);
+  }, options['concurrency'] || 1);
 
   compiler.plugin('compilation', function(compilation) {
     compilation.plugin('normal-module-loader', function(context) {

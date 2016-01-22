@@ -15,31 +15,16 @@ npm i -D webpack-closure-compiler
 
 ### Options
 
-#### language_in
-Specifies input language, possible values are:
-- `ECMASCRIPT3` (default)
-- `ECMASCRIPT5`
-- `ECMASCRIPT5_STRICT`
-- `ECMASCRIPT6`
-- `ECMASCRIPT6_STRICT`
-- `ECMASCRIPT6_TYPED` (experimental)
+#### compiler
 
-#### language_out
-Specifies output language, possible values are:
+A hash of options to pass to
+[google-closure-compiler](https://github.com/chadkillingsworth/closure-compiler-npm#specifying-options).
 
- (defaults to the value of `language_in`)
-- `ECMASCRIPT3`
-- `ECMASCRIPT5`
-- `ECMASCRIPT5_STRICT`
-- `ECMASCRIPT6_TYPED` (experimental)
+#### concurrency
 
-#### compilation_level
-Specifies the compilation level, possible values are:
-- `WHITESPACE_ONLY`
-- `SIMPLE`
-- `ADVANCED`
+The maximum number of compiler instances to run in parallel, defaults to 1.
 
-[What to Watch Out for When Using ADVANCED_OPTIMIZATIONS](https://developers.google.com/closure/compiler/docs/api-tutorial3#dangers)
+### Example
 
 ```javascript
 var path = require('path');
@@ -61,9 +46,12 @@ module.exports = {
     },
     plugins: [
         new ClosureCompilerPlugin({
-          language_in: 'ECMASCRIPT6',
-          language_out: 'ECMASCRIPT5',
-          compilation_level: 'ADVANCED'
+          compiler: {
+            language_in: 'ECMASCRIPT6',
+            language_out: 'ECMASCRIPT5',
+            compilation_level: 'ADVANCED'
+          },
+          concurrency: 3,
         })
     ]
 };

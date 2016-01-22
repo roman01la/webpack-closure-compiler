@@ -13,9 +13,11 @@ module.exports = [
       },
       plugins: [
           new ClosureCompilerPlugin({
-            language_in: 'ECMASCRIPT5',
-            language_out: 'ECMASCRIPT5',
-            compilation_level: 'SIMPLE'
+              compiler: {
+                  language_in: 'ECMASCRIPT5',
+                  language_out: 'ECMASCRIPT5',
+                  compilation_level: 'SIMPLE'
+              },
           })
       ]
   },
@@ -30,9 +32,11 @@ module.exports = [
       },
       plugins: [
           new ClosureCompilerPlugin({
-            language_in: 'ECMASCRIPT6',
-            language_out: 'ECMASCRIPT5',
-            compilation_level: 'SIMPLE'
+              compiler: {
+                  language_in: 'ECMASCRIPT6',
+                  language_out: 'ECMASCRIPT5',
+                  compilation_level: 'SIMPLE'
+              },
           })
       ]
   }

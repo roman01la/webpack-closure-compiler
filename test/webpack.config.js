@@ -11,6 +11,12 @@ module.exports = [
           path: path.join(__dirname, '/'),
           filename: 'module.js'
       },
+      module: {
+        loaders: [{
+          test: /\.css$/,
+          loader: 'css'
+        }]
+      },
       plugins: [
           new ClosureCompilerPlugin({
               compiler: {

@@ -27,7 +27,11 @@ A hash of options to pass to
 
 #### concurrency
 
-The maximum number of compiler instances to run in parallel, defaults to 1.
+The maximum number of compiler instances to run in parallel, defaults to `1`.
+
+#### test
+
+Process only files which filename satisfies specified RegExp, defaults to `/\.js($|\?)/i`.
 
 ### Example
 

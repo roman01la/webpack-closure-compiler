@@ -25,7 +25,14 @@ ClosureCompilerPlugin.prototype.apply = function(compiler) {
 
   var options = this.options;
   var compilerOptions = this.compilerOptions;
+
+  options.test = options.test || /\.js($|\?)/i;
+
   var queue = async.queue(function(task, callback) {
+
+    if (options.test.test(task.file) === false) {
+      return callback();
+    }
 
     var input;
     var inputSourceMap;

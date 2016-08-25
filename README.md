@@ -20,16 +20,20 @@ npm i -D webpack-closure-compiler
 
 ### Options
 
-#### compiler
+#### compiler: &lt;Object&gt;
 
 A hash of options to pass to
 [google-closure-compiler](https://github.com/chadkillingsworth/closure-compiler-npm#specifying-options).
 
-#### concurrency
+#### jsCompiler: &lt;Boolean&gt;
 
-The maximum number of compiler instances to run in parallel, defaults to `1`.
+Use pure JavaScript version of Closure Compiler (no Java dependency). Note that compilation time will be around 2x slower. Default is `false`. *`concurrency` and `jsCompiler` options are mutually exclusive.*
 
-#### test
+#### concurrency: &lt;Number&gt;
+
+The maximum number of compiler instances to run in parallel, defaults to `1`.  *`concurrency` and `jsCompiler` options are mutually exclusive.*
+
+#### test: &lt;RegExp&gt;
 
 Process only files which filename satisfies specified RegExp, defaults to `/\.js($|\?)/i`.
 

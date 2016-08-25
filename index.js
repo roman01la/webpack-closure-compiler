@@ -1,23 +1,37 @@
 var path = require('path');
 var fs = require('fs');
 var gcc = require('./lib/runner');
+var JsGcc = require('./lib/js_runner');
 var RawSource = require('webpack-core/lib/RawSource');
 var SourceMapConsumer = require('webpack-core/lib/source-map').SourceMapConsumer;
 var SourceMapSource = require('webpack-core/lib/SourceMapSource');
 var temp = require('temp').track();
 var async = require('async');
 var ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');
+var snakeToCamel = require('./lib/utils').snakeToCamel;
 
 function ClosureCompilerPlugin(options) {
-  if (typeof options === "object") {
+  if (typeof options === 'object') {
     this.options = options;
   } else {
     this.options = {};
   }
-  if (typeof this.options['compiler'] === "object") {
-    this.compilerOptions = this.options['compiler'];
+  if (typeof this.options.compiler === 'object') {
+    this.compilerOptions = this.options.compiler;
   } else {
     this.compilerOptions = {};
+  }
+  if (this.options.jsCompiler) {
+    var opts = this.compilerOptions;
+    var compilerOptions = Object.keys(opts)
+      .reduce(function(o, k) {
+        o[snakeToCamel(k)] = opts[k];
+        return o;
+      }, {});
+
+    return new JsGcc({
+      options: compilerOptions
+    });
   }
 }
 
@@ -99,7 +113,7 @@ ClosureCompilerPlugin.prototype.apply = function(compiler) {
                 done();
               },
               error: function(err) {
-                console.error("Caught error: ", err);
+                console.error('Caught error: ', err);
                 compilation.errors.push(err);
                 done();
               },

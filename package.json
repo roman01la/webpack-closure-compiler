@@ -20,8 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "async": "^1.5.0",
-    "google-closure-compiler": "^20160517.1.0",
-    "google-closure-compiler-js": "^20160822.0.0",
+    "google-closure-compiler": "^20160911.0.0",
+    "google-closure-compiler-js": "^20160916.0.0",
     "temp": "^0.8.3",
     "webpack-core": "^0.6.8"
   },

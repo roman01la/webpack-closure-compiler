@@ -8,7 +8,7 @@ Google Closure Compiler plugin for Webpack
   <img src="https://img.shields.io/npm/v/webpack-closure-compiler.svg?style=flat-square" />
 </a>
 
-![Webpack Closure Compiler logo](logo.png)
+<img src="logo.png" width="140" alt="Webpack Closure Compiler Plugin"/>
 
 ## Installation
 

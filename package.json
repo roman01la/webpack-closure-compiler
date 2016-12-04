@@ -6,6 +6,10 @@
   "scripts": {
     "test": "webpack --config test/webpack.config.js && webpack --config test/webpack.config-js.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman01la/webpack-closure-compiler.git"
+  },
   "keywords": [
     "webpack",
     "closure",

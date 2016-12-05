@@ -17,7 +17,7 @@ Closure Compiler is the most advanced JavaScript optimization tool. It generates
 
 ## Installation
 
-```
+```bash
 npm i -D webpack-closure-compiler
 ```
 
@@ -44,19 +44,19 @@ Process only files which filename satisfies specified RegExp, defaults to `/\.js
 
 ### Example
 
-```javascript
-var path = require('path');
-var ClosureCompilerPlugin = require('webpack-closure-compiler');
+```js
+import path from 'path';
+import ClosureCompilerPlugin from 'webpack-closure-compiler';
 
 module.exports = {
-
     entry: [
         path.join(__dirname, 'app.js')
     ],
     module: {
-        loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader?optional=runtime&stage=0&cacheDirectory'] }
-        ]
+        loaders: [{
+            test: /\.js$/, exclude: /node_modules/,
+            loaders: ['babel-loader?optional=runtime&stage=0&cacheDirectory']
+        }]
     },
     output: {
         path: path.join(__dirname, '/'),

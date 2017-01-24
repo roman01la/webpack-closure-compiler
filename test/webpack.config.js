@@ -1,6 +1,8 @@
 var path = require('path');
 var ClosureCompilerPlugin = require('../index');
 
+const concurrency = require('os').cpus().length;
+
 module.exports = [
   {
 
@@ -22,8 +24,9 @@ module.exports = [
               compiler: {
                   language_in: 'ECMASCRIPT5',
                   language_out: 'ECMASCRIPT5',
-                  compilation_level: 'SIMPLE'
+                  compilation_level: 'ADVANCED'
               },
+              concurrency
           })
       ]
   },
@@ -36,13 +39,20 @@ module.exports = [
           path: path.join(__dirname, '/'),
           filename: 'module_es6.js'
       },
+      module: {
+        loaders: [{
+          test: /\.css$/,
+          loader: 'css-loader'
+        }]
+      },
       plugins: [
           new ClosureCompilerPlugin({
               compiler: {
                   language_in: 'ECMASCRIPT6',
                   language_out: 'ECMASCRIPT5',
-                  compilation_level: 'SIMPLE'
+                  compilation_level: 'ADVANCED'
               },
+              concurrency
           })
       ]
   }

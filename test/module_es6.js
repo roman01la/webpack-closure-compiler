@@ -1,1 +1,0 @@
-(function(a){function c(d){if(b[d])return b[d].exports;var e=b[d]={exports:{},id:d,loaded:!1};a[d].call(e.exports,e,e.exports,c);e.loaded=!0;return e.exports}var b={};c.m=a;c.c=b;c.p="";return c(0)})([function(a,c,b){a.exports=b(1)},function(a,c,b){a=b(2);console.log(a(30,3))},function(a,c){a.exports=function(b,a){return b/a}}]);

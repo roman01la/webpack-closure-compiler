@@ -14,7 +14,7 @@ module.exports = [
       module: {
         loaders: [{
           test: /\.css$/,
-          loader: 'css'
+          loader: 'css-loader'
         }]
       },
       plugins: [
@@ -23,7 +23,7 @@ module.exports = [
               compiler: {
                   language_in: 'ECMASCRIPT5',
                   language_out: 'ECMASCRIPT5',
-                  compilation_level: 'SIMPLE'
+                  compilation_level: 'ADVANCED'
               },
           })
       ]
@@ -37,13 +37,19 @@ module.exports = [
           path: path.join(__dirname, '/'),
           filename: 'module_es6.js'
       },
+      module: {
+        loaders: [{
+          test: /\.css$/,
+          loader: 'css-loader'
+        }]
+      },
       plugins: [
           new ClosureCompilerPlugin({
               jsCompiler: true,
               compiler: {
                   language_in: 'ECMASCRIPT6',
                   language_out: 'ECMASCRIPT5',
-                  compilation_level: 'SIMPLE'
+                  compilation_level: 'ADVANCED'
               },
           })
       ]

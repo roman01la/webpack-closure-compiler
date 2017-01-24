@@ -23,11 +23,11 @@
     "google-closure-compiler": "20161024.1.0",
     "google-closure-compiler-js": "20161024.0.0",
     "temp": "^0.8.3",
-    "webpack-core": "^0.6.8"
+    "webpack-core": "^0.6.9"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
     "node-libs-browser": "^0.5.3",
-    "webpack": "^1.12.4"
+    "webpack": "^2.2.0"
   }
 }

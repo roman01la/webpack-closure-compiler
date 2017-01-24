@@ -10,6 +10,12 @@ Google Closure Compiler plugin for Webpack
 
 <img src="logo.png" width="140" alt="Webpack Closure Compiler Plugin"/>
 
+## Table of Contents
+- [Why use Closure Compiler instead of UglifyJS?](#why-use-closure-compiler-instead-of-uglifyjs)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+
 ## Why use Closure Compiler instead of UglifyJS?
 Closure Compiler is the most advanced JavaScript optimization tool. It generates smallest bundle and emits efficient JavaScript code by doing whole program analysis and optimization, removing closures and inlining function calls, as well as tree-shaking for AMD, CommonJS and ES2015 modules.
 
@@ -74,6 +80,10 @@ module.exports = {
     ]
 };
 ```
+
+## Contributing
+
+If you've spotted a bug, please, open an issue, and after discussion submit a pull request with a bug fix. If you would like to add a feature or change existing behaviour, open an issue and tell about what exactly you want to change/add.
 
 ## License
 

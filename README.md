@@ -51,19 +51,13 @@ Process only files which filename satisfies specified RegExp, defaults to `/\.js
 ### Example
 
 ```js
-import path from 'path';
-import ClosureCompilerPlugin from 'webpack-closure-compiler';
+const path = require('path');
+const ClosureCompilerPlugin = require('webpack-closure-compiler');
 
 module.exports = {
     entry: [
         path.join(__dirname, 'app.js')
     ],
-    module: {
-        loaders: [{
-            test: /\.js$/, exclude: /node_modules/,
-            loaders: ['babel-loader?optional=runtime&stage=0&cacheDirectory']
-        }]
-    },
     output: {
         path: path.join(__dirname, '/'),
         filename: 'app.min.js'

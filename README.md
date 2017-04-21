@@ -34,7 +34,7 @@ npm i -D webpack-closure-compiler
 #### compiler: &lt;Object&gt;
 
 A hash of options to pass to
-[google-closure-compiler](https://github.com/chadkillingsworth/closure-compiler-npm#specifying-options).
+[google-closure-compiler](https://github.com/google/closure-compiler-npm#specifying-options).
 
 #### jsCompiler: &lt;Boolean&gt;
 

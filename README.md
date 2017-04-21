@@ -13,6 +13,7 @@ Google Closure Compiler plugin for Webpack
 ## Table of Contents
 - [Why use Closure Compiler instead of UglifyJS?](#why-use-closure-compiler-instead-of-uglifyjs)
 - [Installation](#installation)
+- [Requirements](#requirements)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
@@ -26,6 +27,9 @@ Closure Compiler is the most advanced JavaScript optimization tool. It generates
 ```bash
 npm i -D webpack-closure-compiler
 ```
+
+## Requirements
+While there's JavaScript version of Closure Compiler, the original compiler is written in Java and thus Java version is more complete and performs better in terms of JavaScript code optimizations and compilation speed. If you want to use Java-based compiler, make sure you have intalled [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html).
 
 ## Usage
 

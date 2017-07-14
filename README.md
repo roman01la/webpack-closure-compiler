@@ -40,6 +40,8 @@ While there's JavaScript version of Closure Compiler, the original compiler is w
 A hash of options to pass to
 [google-closure-compiler](https://github.com/google/closure-compiler-npm#specifying-options).
 
+You can optionally specify a path to your own version of the compiler.jar if the version provided by the plugin isn't working for you. See example below for optional parameter.
+
 #### jsCompiler: &lt;Boolean&gt;
 
 Use pure JavaScript version of Closure Compiler (no Java dependency). Note that compilation time will be around 2x slower. Default is `false`. *`concurrency` and `jsCompiler` options are mutually exclusive.*
@@ -69,6 +71,7 @@ module.exports = {
     plugins: [
         new ClosureCompilerPlugin({
           compiler: {
+            jar: 'path/to/your/custom/compiler.jar' //optional
             language_in: 'ECMASCRIPT6',
             language_out: 'ECMASCRIPT5',
             compilation_level: 'ADVANCED'

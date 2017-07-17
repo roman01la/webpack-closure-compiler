@@ -1,30 +1,14 @@
-var div = require('./divide');
-var R = require('ramda');
+import preact from 'preact';
+import render from 'preact-render-to-string';
 
-require('./styles.css');
+const { h, Component } = preact;
 
-console.log(div(30, 3));
+const H1 = ({ children }) => h('h1', null, children);
 
-var animals = [
-  {
-    name: 'goose',
-    type: 'bird',
-    color: 'white'
-  },
-  {
-    name: 'parrot',
-    type: 'bird',
-    color: 'yellow'
-  },
-  {
-    name: 'cat',
-    type: 'mammal',
-    color: 'grey'
+class App extends Component {
+  render() {
+    return h('div', null, h(H1, null, 'Hello, world!'));
   }
-];
+}
 
-var getBirds = R.filter(R.compose(R.equals('bird'), R.prop('type')));
-var getBirdsCount = R.compose(length, getBirds);
-var birdsCount = getBirdsCount(animals);
-
-console.log(birdsCount);
+console.log(render(h(App)));

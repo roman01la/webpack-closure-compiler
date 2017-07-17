@@ -23,9 +23,9 @@
   "author": "Roman Liutikov",
   "license": "MIT",
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^1.5.2",
     "google-closure-compiler": "^20170626.0.0",
-    "google-closure-compiler-js": "20170124.0.0",
+    "google-closure-compiler-js": "^20170124.0.0",
     "temp": "^0.8.3",
     "webpack-core": "^0.6.9"
   },
@@ -33,6 +33,6 @@
     "css-loader": "^0.14.5",
     "node-libs-browser": "^0.5.3",
     "ramda": "^0.23.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.7.0"
   }
 }

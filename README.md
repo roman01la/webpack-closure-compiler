@@ -71,7 +71,7 @@ module.exports = {
     plugins: [
         new ClosureCompilerPlugin({
           compiler: {
-            jar: 'path/to/your/custom/compiler.jar' //optional
+            jar: 'path/to/your/custom/compiler.jar', //optional
             language_in: 'ECMASCRIPT6',
             language_out: 'ECMASCRIPT5',
             compilation_level: 'ADVANCED'

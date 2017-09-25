@@ -1,6 +1,8 @@
 # webpack-closure-compiler
 Google Closure Compiler plugin for Webpack
 
+<img src="logo.png" width="140" alt="Webpack Closure Compiler Plugin"/>
+
 <a href="https://travis-ci.org/roman01la/webpack-closure-compiler">
   <img src="https://img.shields.io/travis/roman01la/webpack-closure-compiler.svg?style=flat-square" />
 </a>
@@ -8,7 +10,11 @@ Google Closure Compiler plugin for Webpack
   <img src="https://img.shields.io/npm/v/webpack-closure-compiler.svg?style=flat-square" />
 </a>
 
-<img src="logo.png" width="140" alt="Webpack Closure Compiler Plugin"/>
+<p>
+<a href="https://www.patreon.com/bePatron?c=1239559">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="40px" />
+</a>
+</p>
 
 ## Table of Contents
 - [Why use Closure Compiler instead of UglifyJS?](#why-use-closure-compiler-instead-of-uglifyjs)

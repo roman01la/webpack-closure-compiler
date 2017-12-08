@@ -1,6 +1,6 @@
 {
   "name": "webpack-closure-compiler",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Google Closure Compiler plugin for Webpack",
   "main": "index.js",
   "scripts": {

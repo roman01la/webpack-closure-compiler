@@ -35,7 +35,7 @@ npm i -D webpack-closure-compiler
 ```
 
 ## Requirements
-While there's JavaScript version of Closure Compiler, the original compiler is written in Java and thus Java version is more complete and performs better in terms of JavaScript code optimizations and compilation speed. If you want to use Java-based compiler, make sure you have intalled [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html).
+While there's JavaScript version of Closure Compiler, the original compiler is written in Java and thus Java version is more complete and performs better in terms of JavaScript code optimizations and compilation speed. If you want to use Java-based compiler, make sure you have installed [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html).
 
 ## Usage
 

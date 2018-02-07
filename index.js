@@ -10,6 +10,14 @@ var async = require('async');
 var ModuleFilenameHelpers = require('webpack/lib/ModuleFilenameHelpers');
 var snakeToCamel = require('./lib/utils').snakeToCamel;
 
+
+function loadExterns(paths) {
+  return paths.map((path) => {
+    var data = fs.readFileSync(path, 'utf8');
+    return {src: data, path: path};
+  });
+}
+
 function ClosureCompilerPlugin(options) {
   if (typeof options === 'object') {
     this.options = options;
@@ -28,6 +36,10 @@ function ClosureCompilerPlugin(options) {
         o[snakeToCamel(k)] = opts[k];
         return o;
       }, {});
+
+    if (compilerOptions.externs) {
+      compilerOptions.externs = loadExterns(compilerOptions.externs);
+    }
 
     return new JsGcc({
       options: compilerOptions

@@ -21,6 +21,7 @@ Google Closure Compiler plugin for Webpack
 - [Installation](#installation)
 - [Requirements](#requirements)
 - [Usage](#usage)
+- [Handbook](#handbook)
 - [Contributing](#contributing)
 
 ## Why use Closure Compiler instead of UglifyJS?
@@ -87,6 +88,9 @@ module.exports = {
     ]
 };
 ```
+
+## Handbook
+Read [Closure Compiler Handbook](https://github.com/roman01la/closure-compiler-handbook) to you understand how to use Closure Compiler and learn its features.
 
 ## Contributing
 

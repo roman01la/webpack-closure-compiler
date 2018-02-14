@@ -82,7 +82,7 @@ module.exports = {
             jar: 'path/to/your/custom/compiler.jar', //optional
             language_in: 'ECMASCRIPT6',
             language_out: 'ECMASCRIPT5',
-            devtool: 'source-map',
+            create_source_map: true,
             compilation_level: 'ADVANCED'
           },
           concurrency: 3,

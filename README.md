@@ -75,12 +75,14 @@ module.exports = {
         path: path.join(__dirname, '/'),
         filename: 'app.min.js'
     },
+    devtool: 'source-map',
     plugins: [
         new ClosureCompilerPlugin({
           compiler: {
             jar: 'path/to/your/custom/compiler.jar', //optional
             language_in: 'ECMASCRIPT6',
             language_out: 'ECMASCRIPT5',
+            devtool: 'source-map',
             compilation_level: 'ADVANCED'
           },
           concurrency: 3,

@@ -15,13 +15,15 @@ module.exports = {
       }
     ]
   },
+  devtool: 'source-map',
   plugins: [
     new ClosureCompilerPlugin({
       jsCompiler: true,
       compiler: {
         language_in: 'ECMASCRIPT6',
         language_out: 'ECMASCRIPT5',
-        compilation_level: 'ADVANCED',
+        // compilation_level: 'ADVANCED',
+        create_source_map: true,
         externs: [path.join(__dirname, 'externs.js')]
       }
     })

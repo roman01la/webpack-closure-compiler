@@ -85,7 +85,7 @@ ClosureCompilerPlugin.prototype.apply = function(compiler) {
       } else {
         if (compilerOptions['create_source_map']) {
           var outputSourceMap = JSON.parse(fs.readFileSync(outputSourceMapFile.path));
-          fs.unlinkSync(outputSourceMapFile.path);
+          temp.cleanupSync()
           outputSourceMap.sources = outputSourceMap.sources.map(source => source === 'stdin' ? task.file : source);
           task.callback(new SourceMapSource(
               stdout, task.file, outputSourceMap, input, inputSourceMap));

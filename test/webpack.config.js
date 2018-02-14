@@ -17,12 +17,14 @@ module.exports = {
       }
     ]
   },
+  devtool: 'source-map',
   plugins: [
     new ClosureCompilerPlugin({
       compiler: {
         language_in: 'ECMASCRIPT6',
         language_out: 'ECMASCRIPT5',
         compilation_level: 'ADVANCED',
+        create_source_map: true,
         externs: [path.join(__dirname, 'externs.js')]
       },
       concurrency

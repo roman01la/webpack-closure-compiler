@@ -1,3 +1,7 @@
+# [DEPRECATED]
+
+## This project is deprecated in favor of official Webpack plugin [webpack-contrib/closure-webpack-plugin](https://github.com/webpack-contrib/closure-webpack-plugin)
+
 # webpack-closure-compiler
 Google Closure Compiler plugin for Webpack
 

@@ -24,15 +24,15 @@
   "license": "MIT",
   "dependencies": {
     "async": "^1.5.2",
-    "google-closure-compiler": "^20180402.0.0",
-    "google-closure-compiler-js": "^20180402.0.0",
+    "google-closure-compiler": "20190909.0.0",
+    "google-closure-compiler-js": "20190909.0.0",
     "temp": "^0.8.3",
     "webpack-core": "^0.6.9"
   },
   "devDependencies": {
     "css-loader": "^0.14.5",
-    "preact": "^8.2.1",
-    "preact-render-to-string": "^3.6.3",
+    "preact": "^8.5.2",
+    "preact-render-to-string": "^3.8.2",
     "webpack": "^2.7.0"
   }
 }
